@@ -59,6 +59,7 @@
      <header>
         <h3>A JavaScript project by Yeabsira Girma</h3>
         <h3 id="greeting">Greeting goes here</h3>
+        <h3 id="weekDay">Day of the week goes here</h3>
     </header>
      <p>This page demonstrates how to use a JavaScript to Date object to integrate information <br>
         from the client's system clock into a web page. The web page uses JavaScript to determine <br>
@@ -108,6 +109,8 @@
     let myGreeting="";
     let myColor = "";
     let myPic= "";
+
+    
     // alert(myHour);
     // console.log(myHour);
         // REMOVE THE FOLLOWING LINE - for testing only
@@ -135,6 +138,37 @@
         myPic = "night.jpg";
     }    
 
+    let d = new Date();
+        let myWeekDay = d.getDay();
+        let theWeekDay = "" ;
+    
+    switch(myWeekDay){
+
+        case 0:
+            theWeekDay = "Sunday";
+            break;
+        case 1:
+            theWeekDay = "Monday";
+            break;
+        case 2:
+            theWeekDay = "Tuesday";
+            break;
+        case 3:
+            theWeekDay = "Wednesday";
+            break;
+        case 4:
+            theWeekDay = "Thursday";
+            break;
+        case 5:
+            theWeekDay = "Friday";
+            break;
+        case 6:
+            theWeekDay = "Saturday";
+            break;
+
+
+
+}
     // add images folder to myPic
     myPic="images/" + myPic; 
 
@@ -142,6 +176,8 @@
     document.getElementById("greeting"). innerHTML= myGreeting;
     document.querySelector("html").style.backgroundColor= myColor;
     document.getElementById("pic"). src = myPic;
+    document.getElementById("weekDay"). innerHTML= "Today is " + theWeekDay;
+    document.getElementById("weekDay"). style.color="blue";
 
     //https://tinyurl.com/dynamic-html-checker
     document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
