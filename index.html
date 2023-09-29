@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Time of Day</title>
     <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {padding:0; margin:0;}
         html {background-color:#ccc;}
@@ -47,7 +48,14 @@
             }
         nav a:hover{
             text-decoration: none;
-        }   
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        
+    
     </style>
 </head>
 <body>
@@ -61,10 +69,23 @@
         <h3 id="greeting">Greeting goes here</h3>
         <h3 id="weekDay">Day of the week goes here</h3>
     </header>
-     <p>This page demonstrates how to use a JavaScript to Date object to integrate information <br>
-        from the client's system clock into a web page. The web page uses JavaScript to determine <br>
-        the current hour, and presents a different image, custom message, and color based on the <br>
-        specific time of day. The page also produces a dynamic copyright, produced by JavaScript. 
+     <p>
+        <div>
+            <strong>Dynamic Greetings:</strong> The page changes the greetings dynamically based on the current hour of the client’s system clock. It uses JavaScript to determine the hour and presents a custom message tailored to the specific time of day.
+        </div>
+        <br>
+        <div>
+            <strong>Custom Image:</strong> The page also displays a different image based on the current hour. By integrating JavaScript with a Date object, it determines the specific time of day and selects an image accordingly.
+        </div>
+        <br>
+        <div>
+            <strong>Color Scheme:</strong> In addition to custom greetings and images, the page employs a color scheme that changes based on the time of day. JavaScript is used to determine the hour, allowing for a visually appealing experience.
+        </div>
+        <br>
+        <div>
+            <strong>Dynamic Copyright:</strong> The page generates a dynamic copyright notice using JavaScript. This ensures that the copyright information is always up-to-date and reflects the current year or any other dynamic content.
+        </div>
+        
     </p>
       <img id="pic" src="images/evening.jpg" alt="Time of Day Image" class="flexible" />
      <footer>
